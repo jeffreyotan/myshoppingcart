@@ -1,0 +1,15 @@
+<div class="border" *ngFor="let item of shoppingCart">
+    <div class="row" *ngIf="item.count">
+        <div class="col-6 my-2">
+            <img [src]="item.image" [alt]="item.name" class="thumbnail">
+        </div>
+        <div class="col-3 my-2">
+            <h4>{{item.name}}</h4>
+            <p>{{item.description}}</p>
+            <p>Quantity: {{item.count}}</p>
+        </div>
+        <div class="col-3 my-2">
+            <button class="btn btn-primary" (click)="onRemove(item.name)">Remove</button>
+        </div>
+    </div>
+</div>

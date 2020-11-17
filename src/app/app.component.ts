@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myshoppingcart';
+  itemToAdd = '';
+
+  onNotify($event) {
+    console.log(`Received event: To add ${$event}`);
+    this.itemToAdd = $event;
+
+    setTimeout(() => {
+      this.itemToAdd = "";
+    }, 100);
+  }
 }

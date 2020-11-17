@@ -1,5 +1,5 @@
-<div class="border" *ngFor="let item of shoppingCart">
-    <div class="row" *ngIf="item.count">
+<div *ngFor="let item of shoppingCart">
+    <div class="row border" *ngIf="item.count">
         <div class="col-6 my-2">
             <img [src]="item.image" [alt]="item.name" class="thumbnail">
         </div>
